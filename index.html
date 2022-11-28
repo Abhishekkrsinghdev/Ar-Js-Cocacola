@@ -42,13 +42,14 @@
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
-    <a-marker
-        preset="hiro"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
-      >
+   <a-nft
+      type="nft"
+      url=".\eb03c4668eca8a2e1bb7afaea38df716"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
       <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
       <a-entity
         gltf-model="https://raw.githubusercontent.com/Abhishekkrsinghdev/Ar-Js-Cocacola/master/Bottle%20Coca-Cola%20N080710.gltf"
@@ -56,7 +57,7 @@
         position="50 150 0"
       >
       </a-entity>
-    </a-marker>
+   </a-nft>
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
   </a-scene>
